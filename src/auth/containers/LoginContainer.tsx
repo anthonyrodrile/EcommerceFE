@@ -11,10 +11,15 @@ export const LoginContainer: React.FC = () => {
         const response = await login(email, password);
         console.log(response);
          if (response?.data) {
-             router.push('/');
-             alert('Correcto!');
+             if(response?.data.type == "supplier")
+                router.push('/');
+             if(response?.data.type == "customer")
+                router.push('/welcome');
+            if(response?.data.type == "admin")
+                router.push('/welcome');
+             alert('Correct!');
          } else {
-             alert('Incorrecto!');
+             alert('Credentials Error!');
          }
     };
 

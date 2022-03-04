@@ -59,7 +59,7 @@ export const ProductsContainer: React.FC = () => {
             <Grid>
                 <SearchComponent handleSearch={onHandleSearch} />
             </Grid>
-            <Grid item container spacing={3} xs={6} md={6} lg={6}>
+            <Grid item container spacing={3} xs={5} md={4} lg={4}>
                 {products?.map((product: any) => <ProductComponent key={product?.id} product={product} update={true} onHandleUpdate={onHandleUpdate} onHandleDelete={onHandleDelete} />)}
             </Grid></Grid>
     );

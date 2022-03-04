@@ -58,7 +58,7 @@ const Navigator: React.FC<Props> = ({ selectedOption, paperProps, variant, open,
         <Drawer variant={variant ? variant : "permanent"} PaperProps={paperProps} open={open} onClose={onClose} sx={sx} >
             <List disablePadding>
                 <ListItem sx={{ ...item, ...itemCategory, fontSize: 22, color: '#fff' }}>
-                    Admin Module
+                    Supplier Module
                 </ListItem>
                 <ListItem sx={{ ...item, ...itemCategory }}>
                     <ListItemIcon>

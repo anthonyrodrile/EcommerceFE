@@ -6,7 +6,7 @@ export const login: any = async (email: string, password: string) => {
   try {
     const response = await api.post('/api/auth', { email: email, password: password });
     console.log(response.data);
-    localStorage.setItem("token", response.data);
+    localStorage.setItem("token", response.data.token);
     return response;
   } catch (err) {
     console.log(err);

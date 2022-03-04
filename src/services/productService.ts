@@ -24,7 +24,7 @@ export const getProductById: any = async (id: Number) => {
 
 export const getProductByName: any = async (name: string) => {
   try {
-    const response = await api.get(`/api/product/name/${name}`);
+    const response = await api.get(`/api/product/${name}`);
     console.log(response);
     return response;
   } catch(e) {
